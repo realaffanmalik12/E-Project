@@ -1,0 +1,31 @@
+/* Slider image responsive heights */
+/* Use viewport height so slider fits devices better and doesn't become too tall */
+.carousel-item img {
+	height: 60vh; /* primary height for desktop/tablet */
+	object-fit: cover; /* crop to fill the area while preserving aspect ratio */
+}
+
+/* If you prefer a max-height instead (so very tall images don't stretch), uncomment:
+.carousel-item img { max-height: 60vh; width: 100%; object-fit: cover; }
+*/
+
+/* Smaller devices: reduce slider height so the hero doesn't dominate the screen */
+@media (max-width: 767px) {
+	.carousel-item img {
+		height: 40vh;
+	}
+}
+
+/* Very large screens: cap the height so it doesn't grow too tall */
+@media (min-width: 1600px) {
+	.carousel-item img {
+		height: 80vh;
+	}
+}
+#nav-cont{
+    background-color: #1A5276;
+   
+}
+#nav-cont a,li{
+     color: #FFFFFF;
+}
