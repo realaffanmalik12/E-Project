@@ -11,37 +11,46 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-  rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+  
+  <!-- Navbar Section -->
   <nav class="navbar navbar-expand-lg navbar-light " id="nav-cont">
     <div class="container-fluid p-2 navbar-container">
-      <!-- LEFT: Logo -->
       <div class="nav-left">
-        <a class="navbar-brand" href="#"><img src="../Project/Pictures/logo.png" alt="" width="100" height="90"></a>
+        <a class="navbar-brand" href="Home.html"><img src="../Project/Pictures/logo.png" alt="" width="95" height="85"><br></a>
       </div>
 
-      <!-- CENTER: Nav links (collapsible on small screens) -->
       <div class="nav-center collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Home</a>
+            <a class="nav-link " aria-current="page" href="Home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="#">Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#AD-h2">Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
         </ul>
       </div>
-
-      <!-- RIGHT: Toggler (for small screens) + buttons -->
       <div class="nav-right d-flex align-items-center">
-        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -53,7 +62,7 @@
     </div>
   </nav>
 
- <!--   Slider Section  -->
+  <!--   Slider Section  -->
 
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -91,29 +100,111 @@
 
   </section>
 
+  <!-- Events Card Section -->
+  <section>
+    <div class="container pb-4" id="card-container">
+      <h2 class="p-2">Upcoming Events</h2>
+      <div class="d-flex justify-content-between me-2 " id="cards">
+        <div class="card" style="width: 18rem;" id="card-item">
+          <img src="../Project/Pictures/card-img1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title">Esports Tournament</h5>
+            <p class="card-text">Join us for an exciting esports tournament. With thrilling matches and amazing prizes,
+              it's an event you won't want to miss!</p>
+            <a href="#" class="btn btn-warning" id="cards-btn">Register Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;" id="card-item">
+          <img src="../Project/Pictures/card-img2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Job Fair</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-warning mt-3" id="cards-btn">Read more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;" id="card-item">
+          <img src="../Project/Pictures/card-img3.webp" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title">Farewell Party 2025</h5>
+            <p class="card-text">Take a look back at the highlights from our unforgettable Farewell Party 2025.</p>
+            <a href="#" class="btn btn-warning" id="cards-btn">See Highlights</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;" id="card-item">
+          <img src="../Project/Pictures/card-img4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Job Fair</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-warning" id="cards-btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-     <!-- Footer Section -->
+  <!-- Admission Form Section -->
+  <section id="Admission-form">
+    <div class="container mb-2">
+      <div class="row d-flex mb-2">
+      <h2 id="AD-h2">Get Registered Now</h2>
+      <div id="AD-form-left">
+        <form action="">
+          
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your full name">
+          
+          
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+          
+        </form>
+      </div>
+      <div id="AD-form-right">
+        <form action="">
+          <label for="number" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="number" required placeholder="Enter Your Phone Number">
+          <label for="Qualifications" class="form-label">Qualifications</label><br>
+          <input list="Qualifications" class="form-control" name="Qualification" id="Qualification" required placeholder="Select one...">
+          <datalist id="Qualifications">
+            <option value="Phd"></option>
+            <option value="Masters">
+            <option value="Bachelors">
+            <option value="Intermediate">
+            <option value="Matriculation">
+          </datalist>
+        </form>
+      </div>
+      
+    </div>
+    <div class="btn btn-warning" id="Admission-form-btn">Submit</div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
 
   <section class="footer ">
     <div class="container-fluid m-0" id="footer">
       <div id="footer-left" class="col-5">
         <p><i class="fa-solid fa-location-dot"></i> 21 Revolution Street<br><strong>Paris, France</strong></p>
         <p><i class="fa-solid fa-phone"></i><strong>+1 555 123456</strong> </p>
-        <p ><i class="fa-solid fa-envelope"></i> <a href="mailto:support@company.com" >support@company.com</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:support@company.com">support@company.com</a></p>
       </div>
       <div class="col-5">
         <div id="footer-right">
-        <h4>About the company</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+          <h4>About the company</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit, eu auctor lacus
+            vehicula sit amet.</p>
 
-      </div>
-      <div class="social-icons">
+        </div>
+        <div class="social-icons">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
-    </div>
+      </div>
     </div>
   </section>
 

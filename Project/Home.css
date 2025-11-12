@@ -2,8 +2,9 @@
 	--background-color: #fff;
 	--primary-color: #1A5276;
 	--secondary-color: #E5E8E8;
+	--warning-color: #F4D03F;
 	--font-family-text: "Montserrat", sans-serif;
-	--font-family-heading: "Lato", sans-serif;
+	--font-family-heading: "Lato";
 }
 body{
 	background-color: var(--background-color);
@@ -11,25 +12,20 @@ body{
 	padding: 0;
 	font-family: var(--font-family-text);
 }
-/* Slider image responsive heights */
-/* Use viewport height so slider fits devices better and doesn't become too tall */
+/* Slider */
 .carousel-item img {
-	height: 60vh; /* primary height for desktop/tablet */
-	object-fit: cover; /* crop to fill the area while preserving aspect ratio */
+	height: 60vh;
+	object-fit: cover;
 }
 
-/* If you prefer a max-height instead (so very tall images don't stretch), uncomment:
-.carousel-item img { max-height: 60vh; width: 100%; object-fit: cover; }
-*/
-
-/* Smaller devices: reduce slider height so the hero doesn't dominate the screen */
+/* Smaller devices */
 @media (max-width: 767px) {
 	.carousel-item img {
 		height: 40vh;
 	}
 }
 
-/* Very large screens: cap the height so it doesn't grow too tall */
+/* Very large screens*/
 @media (min-width: 1600px) {
 	.carousel-item img {
 		height: 80vh;
@@ -56,7 +52,7 @@ body{
 .nav-center{
 	flex: 1 1 auto;
 	display: flex;
-	justify-content: center; /* center the nav links */
+	justify-content: center;
 }
 .nav-center .navbar-nav{
 	display: flex;
@@ -76,12 +72,64 @@ body{
 .nav-item a:hover{
 	color: #D4E6F1;
 	/* background-color: #154360; */
-	border-bottom: 1px solid #D4E6F1;
+	transform: translateY(-4px);
+	transition: all 0.3s ease;
 }
 #nav-btns .btn{
 	margin-left: 10px;
 	font-weight: 500;
 	font-family: var(--font-family-text);
+}
+
+/* CARD SECTION */
+#card-container{
+	background-color: var(--secondary-color);
+}
+#card-container h2{
+	text-align: center;
+	font-family: var(--font-family-heading);
+	font-weight: 700;
+	margin: 20px 0;
+}
+#card-item p{
+	font-family: var(--font-family-text);
+}
+#card-item h5{
+	font-family: var(--font-family-heading);
+	font-weight: 700;
+}
+#cards-btn{
+	font-family: var(--font-family-text);
+	font-weight: 500;
+	
+}
+#cards-btn:hover{
+	transform: translateY(-3px);
+	transition: all 0.3s ease;
+}	
+
+/* ADMISSION FORM SECTION */
+#AD-form-left,#AD-form-right{
+	flex: 1 1 45%;
+	margin: 10px;
+	padding: 10px;
+	background-color: var(--secondary-color);
+	border-radius: 8px;
+	font-family: var(--font-family-text);
+}
+#AD-h2{
+	text-align: center;
+	font-family: var(--font-family-heading);
+	font-weight: 700;
+	margin: 20px 0;
+}
+#Admission-form-btn{
+	font-family: var(--font-family-text);
+	font-weight: 500;
+}
+#Admission-form-btn:hover{
+	transform: translateY(-4px);
+	transition: all 0.3s ease;
 }
 
 /* FOOTER SECTION */
@@ -96,8 +144,8 @@ body{
 }
 #footer-right h4{
 	font-family: var(--font-family-heading);
-	font-weight: 600;
-	font-style: italic;
+	font-weight: 700;
+	font-style: normal;
 }
 #footer-right,#footer-left p{
 	font-family: var(--font-family-text);
