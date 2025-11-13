@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - College Management Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1A5276;
+      --accent: #F4D03F;
+      --text-color: #2C3E50;
+      --secondary-neutral: #E5E8E8;
+      --background: #FFFFFF;
+      --hover-yellow: #FFD94A;
+      --bs-body-color: var(--text-color);
+      --bs-body-font-family: 'Inter', sans‑serif;
+    }
+    .bg-primary-custom { background-color: var(--primary) !important; }
+    .text-primary-custom { color: var(--primary) !important; }
+    .bg-accent-custom { background-color: var(--accent) !important; }
+    .text-accent-custom { color: var(--accent) !important; }
+    .bg-neutral-custom { background-color: var(--secondary-neutral) !important; }
+    .navbar-custom {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand-google {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .btn-primary-custom {
+      background-color: var(--accent);
+      color: var(--primary);
+      border-color: var(--accent);
+      font-weight: 600;
+      padding: 10px 25px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(244,208,63,0.4);
+      border-radius: 8px;
+    }
+    .btn-primary-custom:hover {
+      background-color: var(--hover-yellow);
+      color: var(--primary);
+      border-color: var(--hover-yellow);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(244,208,63,0.6);
+    }
+    .hero-section {
+      background: linear-gradient(rgba(26,82,118,0.8),rgba(26,82,118,0.8)),
+                  url('https://via.placeholder.com/1500x400/1A5276/FFFFFF?text=Modern+Digital+Campus+Environment') no-repeat center center/cover;
+      color: var(--background);
+      padding: 6rem 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .page-header { font-size: 3rem; font-weight:700; }
+    .section-title-accent {
+      border-left:5px solid var(--accent);
+      padding-left:15px;
+      font-weight:600;
+      margin-bottom:20px;
+    }
+    .card {
+      border:none;
+      border-radius:12px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      height:100%;
+    }
+    .image-container img {
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:8px;
+      transition:transform 0.3s ease;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .image-container img:hover {
+      transform: scale(1.03);
+    }
+    .footer-custom {
+      padding:20px 0;
+      font-size:0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .education-icon {
+      width:30px;
+      height:30px;
+      background-color: var(--accent);
+      mask: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Education_icon.svg/1200px-Education_icon.svg.png') no-repeat center / contain;
+      -webkit-mask: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Education_icon.svg/1200px-Education_icon.svg.png') no-repeat center / contain;
+      margin-right:10px;
+    }
+    @media (min-width:992px) {
+      .navbar-collapse { flex-grow:0; }
+      .navbar-nav { margin:0 4rem; }
+    }
+    .footer-links a {
+  color: #FFFFFF;                 
+  text-decoration: none;          
+  transition: color 0.2s ease;    
+}
+.footer-links a:hover {
+  color: #F4D03F !important;      
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom navbar-custom sticky-top">
+  <div class="container-fluid container-lg">
+    <a class="navbar-brand navbar-brand-google" href="index.html">College Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-primary-custom d-none d-lg-block">Login</button>
+  </div>
+</nav>
+
+<header class="hero-section text-center mb-5">
+  <div class="container py-5">
+    <h1 class="page-header fw-bold mb-3">Empowering Educational Excellence</h1>
+    <p class="lead mb-4 text-neutral-custom">A unified platform built on reliability, innovation, and trust, managing the future of your institution.</p>
+    <a href="#about-content" class="btn btn-primary-custom btn-lg">Discover Our Story</a>
+  </div>
+</header>
+
+<main class="py-5 bg-neutral-custom" id="about-content">
+  <div class="container bg-white p-4 p-md-5 rounded-4 shadow-lg">
+    <h2 class="text-center text-primary-custom mb-5 page-header">
+      <span class="education-icon align-middle"></span>
+      Who We Are
+    </h2>
+    <p class="fs-5 mb-5 text-center px-lg-5">
+      <span class="fw-bold text-accent-custom">College Management</span> is a leading technology solution provider dedicated to streamlining the complex administrative and academic processes within higher education. Founded on the principles of efficiency and user experience, we strive to elevate the quality of management for colleges worldwide.
+    </p>
+
+    <div class="row g-4 mb-5 align-items-center">
+      <div class="col-lg-7">
+        <h3 class="section-title-accent text-primary-custom">Our Core Principles</h3>
+        <div class="card p-4 mb-3">
+          <h4 class="text-primary-custom mb-2 fw-bold">Vision: Global Standard</h4>
+          <p class="mb-0">To be the essential global platform for higher education technology, known for its security, scalability, and ability to connect diverse campus communities seamlessly.</p>
+        </div>
+        <div class="card p-4">
+          <h4 class="text-primary-custom mb-2 fw-bold">Mission: Simplify and Secure</h4>
+          <p class="mb-0">We deliver cutting‑edge tools that simplify complex tasks—from enrollment to graduation—ensuring data security and operational transparency for all stakeholders.</p>
+        </div>
+      </div>
+      <div class="col-lg-5 image-container">
+        <img src="img4.jpg" class="img-fluid rounded-3" alt="Group of diverse students collaborating on a project">
+      </div>
+    </div>
+
+    <h3 class="section-title-accent text-primary-custom mt-5 mb-4">Inside the Student Ecosystem</h3>
+    <div class="row g-4 image-grid">
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img1.jpg" class="img-fluid rounded-3" alt="Students studying together in a modern library">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img2.jpg" class="img-fluid rounded-3" alt="Small group of students having a discussion and studying">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img3.avif" class="img-fluid rounded-3" alt="Students engaged in an interactive classroom setting">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img5.jpg" class="img-fluid rounded-3" alt="Students participating in an outdoor campus event or activity">
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8 text-center bg-neutral-custom p-4 rounded-3">
+        <h3 class="text-primary-custom fw-bold">Ready to Elevate Your Institution?</h3>
+        <p class="lead text-text-color">Join the hundreds of colleges simplifying their operations with CollegeCMS.</p>
+        <button id="learnMoreBtn" class="btn btn-primary-custom btn-lg mt-3">Request a Demo</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-primary-custom text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- About & logo -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-accent-custom fw-bold">CollegeCMS</h5>
+        <p>Delivering smarter education management for institutions. © 2025 CollegeCMS</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4 footer-links">
+  <h6 class="fw-bold text-uppercase">Quick Links</h6>
+  <ul class="list-unstyled">
+    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+    <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+    <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+  </ul>
+</div>
+
+<div class="col-md-3 mb-4 footer-links">
+  <h6 class="fw-bold text-uppercase">Resources</h6>
+  <ul class="list-unstyled">
+    <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+    <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+    <li><a href="#" class="text-white text-decoration-none">Sitemap</a></li>
+    <li><a href="#" class="text-white text-decoration-none">Help & Support</a></li>
+  </ul>
+</div>
+
+
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold text-uppercase">Contact Us</h6>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> 1234 Education Rd, Cityname</p>
+        <p class="mb-1"><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</p>
+        <p class="mb-3"><i class="bi bi-envelope-fill"></i> info@collegecms.com</p>
+        <div>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col text-center mt-3">
+        <hr class="border-light">
+        <p class="small mb-0">© 2025 CollegeCMS. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const demoBtn = document.getElementById('learnMoreBtn');
+    const discoverBtn = document.querySelector('.hero-section .btn-lg');
+    if (demoBtn) {
+      demoBtn.addEventListener('click', function() {
+        alert('A representative will contact you shortly to schedule a demo!');
+      });
+    }
+    if (discoverBtn) {
+      discoverBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+</body>
+</html>
