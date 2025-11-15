@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===================== Basic Page Metadata ===================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - College Management Platform</title>
+
+  <!-- ===================== External Libraries ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===================== Custom Styling ===================== -->
+  <style>
+    :root {
+      --primary: #1A5276;
+      --accent: #F4D03F;
+      --text-color: #2C3E50;
+      --secondary-neutral: #E5E8E8;
+      --background: #FFFFFF;
+      --hover-yellow: #FFD94A;
+      --bs-body-color: var(--text-color);
+      --bs-body-font-family: 'Inter', sans-serif;
+    }
+
+    /* ===================== Utility Classes ===================== */
+    .bg-primary-custom { background-color: var(--primary) !important; }
+    .text-primary-custom { color: var(--primary) !important; }
+    .bg-accent-custom { background-color: var(--accent) !important; }
+    .text-accent-custom { color: var(--accent) !important; }
+    .bg-neutral-custom { background-color: var(--secondary-neutral) !important; }
+
+    /* ===================== NAVBAR SECTION ===================== */
+    #nav-cont {
+      background-color: var(--primary);
+    }
+    #nav-cont a, li {
+      color: #ffffff;
+    }
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-center .navbar-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-item a {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .nav-item a:hover {
+      color: #D4E6F1;
+      transition: all 0.3s ease;
+      transform: translateY(-3px);
+    }
+    #nav-btns .btn {
+      margin-left: 10px;
+      font-weight: 500;
+    }
+
+    /* ===================== HERO SECTION ===================== */
+    .hero-section {
+      background: linear-gradient(rgba(26,82,118,0.8),rgba(26,82,118,0.8)),
+                  url('https://via.placeholder.com/1500x400/1A5276/FFFFFF?text=Modern+Digital+Campus+Environment')
+                  no-repeat center center/cover;
+      color: var(--background);
+      padding: 6rem 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      text-align: center;
+    }
+
+    .page-header {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .section-title-accent {
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* ===================== CARD + IMAGE STYLE ===================== */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ===================== FOOTER ===================== */
+  /* ===================== FIXED FOOTER ===================== */
+#footer {
+  background-color: var(--primary);   /* FIXED: var(--primary-color) was invalid */
+  color: var(--background);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#footer-left, 
+#footer-right {
+  flex: 1 1 300px;
+}
+
+#footer-left p,
+#footer-right p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+#footer-right h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Footer Links */
+#footer-left a {
+  text-decoration: none;
+  color: var(--background);
+}
+
+#footer-left a:hover {
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: var(--background);
+  margin: 0 10px;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Copyright Area */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  background: #163F56;
+  color: var(--background);
+  margin-top: 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.footer-bottom hr {
+  width: 90%;
+  margin: 10px auto;
+  border-color: rgba(255,255,255,0.4);
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg" id="nav-cont">
+  <div class="container-fluid p-2 navbar-container">
+
+    <!-- Logo Area -->
+    <div class="nav-left">
+      <a class="navbar-brand" href="Home.html">
+        <img src="../Project/Pictures/logo.png" alt="Logo" width="90" height="80">
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-center collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#AD-h2">Admission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Side Buttons -->
+    <div class="nav-right d-flex align-items-center">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex" id="nav-btns">
+        <button class="btn btn-outline-light me-2" type="button">Login</button>
+        <button class="btn btn-outline-light" type="button">Register</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ===================== HERO SECTION ===================== -->
+<header class="hero-section">
+  <div class="container py-5">
+    <h1 class="page-header">Empowering Educational Excellence</h1>
+    <p class="lead text-neutral-custom">
+      A unified platform built on reliability, innovation, and trust.
+    </p>
+    <button class="btn btn-outline-light btn-lg fw-semibold" onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">Discover Our Story</button>
+  </div>
+</header>
+
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<main class="py-5 bg-neutral-custom" id="about-content">
+  <div class="container bg-white p-5 rounded-4 shadow-lg">
+
+    <!-- ========= WHO WE ARE ========= -->
+    <h2 class="text-center text-primary-custom mb-5 page-header">
+      Who We Are <!-- Comment added on heading -->
+    </h2>
+
+    <p class="fs-5 text-center px-lg-5 mb-5">
+      <span class="fw-bold text-accent-custom">College Management</span> is a leading solution provider dedicated to simplifying administrative and academic experiences across higher education.
+    </p>
+
+    <div class="row g-4 mb-5 align-items-center">
+      <div class="col-lg-7">
+
+        <!-- ========= OUR CORE PRINCIPLES ========= -->
+        <h3 class="section-title-accent text-primary-custom">Our Core Principles <!-- Heading Comment --> </h3>
+
+        <div class="card p-4 mb-3">
+          <h4 class="text-primary-custom fw-bold">Vision: Global Standard <!-- Heading Comment --> </h4>
+          <p>To be a global leader in higher education technology with unmatched security and scalability.</p>
+        </div>
+
+        <div class="card p-4">
+          <h4 class="text-primary-custom fw-bold">Mission: Simplify and Secure <!-- Heading Comment --> </h4>
+          <p>We provide tools that streamline operations, ensuring transparency and ease for all users.</p>
+        </div>
+      </div>
+
+      <!-- Image beside text -->
+      <div class="col-lg-5 image-container">
+        <img src="img4.jpg" class="img-fluid rounded-3" alt="Group of students collaborating">
+      </div>
+    </div>
+
+
+    <!-- ========= INSIDE THE STUDENT ECOSYSTEM ========= -->
+    <h3 class="section-title-accent text-primary-custom">Inside the Student Ecosystem <!-- Heading Comment --> </h3>
+
+    <div class="row g-4 image-grid">
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img1.jpg" alt="Students studying">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img2.jpg" alt="Group study discussion">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img3.avif" alt="Interactive classroom">
+      </div>
+      <div class="col-md-6 col-lg-3 image-container">
+        <img src="img5.jpg" alt="Campus outdoor activities">
+      </div>
+    </div>
+
+
+    <!-- ========= CALL TO ACTION ========= -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8 text-center bg-neutral-custom p-4 rounded-3">
+        <h3 class="text-primary-custom fw-bold">Ready to Elevate Your Institution? <!-- Heading Comment --> </h3>
+        <p class="lead">Join the colleges transforming operations with CollegeCMS.</p>
+        <button id="learnMoreBtn" class="btn btn-outline-light btn-lg fw-semibold mt-3" onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">Request a Demo</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <section class="footer">
+    <div class="container-fluid" id="footer">
+
+      <!-- Left -->
+      <div id="footer-left">
+        <p><i class="fa-solid fa-location-dot"></i> 21 Revolution Street<br><strong>Paris, France</strong></p>
+        <p><i class="fa-solid fa-phone"></i> <strong>+1 555 123456</strong></p>
+        <p><i class="fa-solid fa-envelope"></i>
+          <a href="mailto:support@company.com">support@company.com</a>
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div id="footer-right">
+        <h4>About the company</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <hr>
+      <p>© 2025 CollegeCMS. All rights reserved.</p>
+    </div>
+  </section>
+</footer>
+
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const demoBtn = document.getElementById('learnMoreBtn');
+    const discoverBtn = document.querySelector('.hero-section .btn-lg');
+
+    if (demoBtn) {
+      demoBtn.addEventListener('click', function() {
+        alert('A representative will contact you shortly to schedule a demo!');
+      });
+    }
+
+    if (discoverBtn) {
+      discoverBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+  });
+</script>
+
+</body>
+</html>
