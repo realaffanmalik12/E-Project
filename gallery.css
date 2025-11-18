@@ -61,6 +61,36 @@ body{
 	font-family: var(--font-family-text);
 }
 
+/* EVENTS SECTION */
+
+#events-sec{
+	background-color: rgb(187, 186, 186);
+}
+#events-sec-h2{
+	font-family: var(--font-family-heading);
+	font-weight: 600;
+	color: #1A5276;
+	display: flex;
+	align-content: center;
+}
+#events-sec p{
+	font-family: var(--font-family-text);
+	font-weight: 100;
+}
+#first-card h2{
+  font-family:  sans-serif;
+  font-optical-sizing: none;
+  font-weight: 500;
+  font-style: normal;
+	color: #1A5276;
+}
+#first-card{
+	transition: transform 0.25s ease;
+}
+#first-card:hover{
+	transform: scale(1.05);
+}
+
 /* FOOTER SECTION */
 
 #footer{
